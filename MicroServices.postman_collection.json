@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "a4f29bd7-945c-4cbe-b53e-974d20aed80b",
+		"name": "MicroServices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30931488"
+	},
+	"item": [
+		{
+			"name": "UserMicroservice",
+			"item": [
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8082/users"
+					},
+					"response": []
+				},
+				{
+					"name": "Add User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\" : \"C\",\r\n    \"userAddress\" : \"Noida\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8082/users"
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8082/users/edf77ecf-c113-4c48-bcd9-63c3f4f660cc"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HotelMicroservice",
+			"item": [
+				{
+					"name": "Add Hotel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"hotelName\" : \"Lalit\",\r\n    \"hotelAddress\" : \"CP\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8083/hotels"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Hotels",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8083/hotels"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Hotel By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8083/hotels/f2079f71-841d-4daf-9af2-e8dc05506e8e"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RatingService",
+			"item": [
+				{
+					"name": "Add Rating",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\" : \"c27db355-28ad-4d57-bc12-848cf3233189\",\r\n    \"hotelId\" : \"f94bceda-f961-4571-af56-60295c6f6fb1\",\r\n    \"rating\" : 9,\r\n    \"feedback\" : \"Best\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8084/ratings"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Ratings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8084/ratings"
+					},
+					"response": []
+				},
+				{
+					"name": "Get By User Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8084/ratings/users/edf77ecf-c113-4c48-bcd9-63c3f4f660cc"
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Hotel Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8084/ratings/hotels/f2079f71-841d-4daf-9af2-e8dc05506e8e"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Api Gateway",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:909/staffs"
+			},
+			"response": []
+		}
+	]
+}
